@@ -49,11 +49,11 @@ const Login = () => {
 				{errMsg && <p>{errMsg}</p>}
 				<Form onSubmit={handleSubmit}>
 					<Form.Group className="mb-3">
-						<Form.Label>Username</Form.Label>
+						<Form.Label>Email</Form.Label>
 						<Form.Control
 							type="text"
-							name="username"
-							placeholder="Enter username"
+							name="email"
+							placeholder="Enter email"
 							required
 							onChange={(e) => setUser(e.target.value)}
 							value={user}

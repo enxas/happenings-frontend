@@ -3,7 +3,7 @@ import axios from "./axios"
 
 async function login(email, password) {
 	try {
-		const response = await axios.post('/login',
+		const response = await axios.post('/api/v1/login',
 			JSON.stringify({ email, password }),
 			{
 				headers: { "Content-Type": "application/json" },
@@ -18,7 +18,7 @@ async function login(email, password) {
 
 async function register(email, username, password, passwordRepeat) {
 	try {
-		const response = await axios.post('/register',
+		const response = await axios.post('/api/v1/register',
 			JSON.stringify({ email, username, password, passwordRepeat }),
 			{
 				headers: { 'Content-Type': 'application/json' },
@@ -33,7 +33,7 @@ async function register(email, username, password, passwordRepeat) {
 
 async function logout(axiosPrivate) {
 	try {
-		const response = await axiosPrivate.get('/logout',
+		const response = await axiosPrivate.get('/api/v1/logout',
 			{
 				headers: { 'Content-Type': 'application/json' },
 				withCredentials: true,
